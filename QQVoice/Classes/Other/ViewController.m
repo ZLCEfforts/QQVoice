@@ -16,11 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //asdasdasadasdasda
+ 
    
 }
 
 
+- (IBAction)pushBtnClick:(id)sender {
+    
+    
+    NSLog(@"跳转");
+}
 
 @end

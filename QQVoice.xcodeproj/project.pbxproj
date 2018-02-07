@@ -15,6 +15,7 @@
 		047841FC202AD04200D131C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 047841FB202AD04200D131C2 /* main.m */; };
 		04784206202AD04200D131C2 /* QQVoiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04784205202AD04200D131C2 /* QQVoiceTests.m */; };
 		04784211202AD04200D131C2 /* QQVoiceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04784210202AD04200D131C2 /* QQVoiceUITests.m */; };
+		2C7541E4FE1068FAD521889A /* libPods-QQVoice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A8D9852977900C4CB43C2B /* libPods-QQVoice.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0395F8118533A5418FA074FC /* Pods-QQVoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQVoice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QQVoice/Pods-QQVoice.debug.xcconfig"; sourceTree = "<group>"; };
 		047841E9202AD04200D131C2 /* QQVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047841EC202AD04200D131C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		047841ED202AD04200D131C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		0478420C202AD04200D131C2 /* QQVoiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QQVoiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04784210202AD04200D131C2 /* QQVoiceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQVoiceUITests.m; sourceTree = "<group>"; };
 		04784212202AD04200D131C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADBAEF358F85F3F503DE1022 /* Pods-QQVoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QQVoice.release.xcconfig"; path = "Pods/Target Support Files/Pods-QQVoice/Pods-QQVoice.release.xcconfig"; sourceTree = "<group>"; };
+		B2A8D9852977900C4CB43C2B /* libPods-QQVoice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QQVoice.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7541E4FE1068FAD521889A /* libPods-QQVoice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013691596A7616C05575DCC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2A8D9852977900C4CB43C2B /* libPods-QQVoice.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		047841E0202AD04200D131C2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,8 @@
 				04784204202AD04200D131C2 /* QQVoiceTests */,
 				0478420F202AD04200D131C2 /* QQVoiceUITests */,
 				047841EA202AD04200D131C2 /* Products */,
+				B180647D0C5997E3C180B498 /* Pods */,
+				013691596A7616C05575DCC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				0478421E202AD0FB00D131C2 /* Classes */,
-				047841EF202AD04200D131C2 /* ViewController.h */,
-				047841F0202AD04200D131C2 /* ViewController.m */,
 				047841F2202AD04200D131C2 /* Main.storyboard */,
 				047841F5202AD04200D131C2 /* Assets.xcassets */,
 				047841F7202AD04200D131C2 /* LaunchScreen.storyboard */,
@@ -170,6 +183,8 @@
 			children = (
 				047841EC202AD04200D131C2 /* AppDelegate.h */,
 				047841ED202AD04200D131C2 /* AppDelegate.m */,
+				047841EF202AD04200D131C2 /* ViewController.h */,
+				047841F0202AD04200D131C2 /* ViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -188,6 +203,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B180647D0C5997E3C180B498 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0395F8118533A5418FA074FC /* Pods-QQVoice.debug.xcconfig */,
+				ADBAEF358F85F3F503DE1022 /* Pods-QQVoice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04784215202AD04200D131C2 /* Build configuration list for PBXNativeTarget "QQVoice" */;
 			buildPhases = (
+				7CEA8D81D163EC655FCBD1BD /* [CP] Check Pods Manifest.lock */,
 				047841E5202AD04200D131C2 /* Sources */,
 				047841E6202AD04200D131C2 /* Frameworks */,
 				047841E7202AD04200D131C2 /* Resources */,
+				AFCA67578C531DA243AAB4F8 /* [CP] Embed Pods Frameworks */,
+				BA1DA8BD824735D9A27FDA84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +342,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CEA8D81D163EC655FCBD1BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QQVoice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFCA67578C531DA243AAB4F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQVoice/Pods-QQVoice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1DA8BD824735D9A27FDA84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QQVoice/Pods-QQVoice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		047841E5202AD04200D131C2 /* Sources */ = {
@@ -484,6 +562,7 @@
 		};
 		04784216202AD04200D131C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0395F8118533A5418FA074FC /* Pods-QQVoice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +578,7 @@
 		};
 		04784217202AD04200D131C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADBAEF358F85F3F503DE1022 /* Pods-QQVoice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
