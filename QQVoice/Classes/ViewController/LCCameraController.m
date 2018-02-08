@@ -52,7 +52,7 @@
     
     if(is_permissions){
         
-        [self customCamera];
+//        [self customCamera];
         [self customUI];
     }
 }
@@ -115,11 +115,13 @@
 #pragma mark - 初始化UI
 - (void)customUI{
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     UIView *top_view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, PScreenWidth, 200)];
     top_view.backgroundColor = [UIColor clearColor];
     [self.view addSubview:top_view];
     
-    UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 40, 120, 30)];
+    UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 40, 100, 30)];
     nameLabel.text = @"ZLC";
     nameLabel.font = [UIFont systemFontOfSize:23];
     nameLabel.textAlignment = NSTextAlignmentCenter;
@@ -139,14 +141,22 @@
     [self.camera_switch_Btn addTarget:self action:@selector(cameraChange) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.camera_switch_Btn];
 
-    // X按钮 和 返回
-    self.exitButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.exitButton.frame = CGRectMake(20, 90, 40, 40);
-     self.exitButton.backgroundColor = [UIColor orangeColor];
-    [self.exitButton setImage:[UIImage imageNamed:@"live_camera_close"] forState:UIControlStateNormal];
-    [self.exitButton setImage:[UIImage imageNamed:@"live_camera_closeS"] forState:UIControlStateHighlighted];
-    [self.exitButton addTarget:self action:@selector(exitButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.exitButton];
+    
+    self.cameraFunctionView = [[LCCameraFunctionView alloc]initWithFrame:CGRectMake(0, PScreenHeight - 200, PScreenWidth, 200)];
+    
+    [self.view addSubview:self.cameraFunctionView];
+    
+    __weak __typeof(self)weakSelf = self;
+    [self.cameraFunctionView setHangUpBtnBlock:^{
+        
+         [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [self.cameraFunctionView setToolBtnBlock:^(NSInteger index) {
+        
+        
+    }];
+
 
 }
 
@@ -219,13 +229,6 @@
     return nil;
 }
 
-
-#pragma mark - 退出按钮事件
--(void)exitButtonClick{
- 
-   [self dismissViewControllerAnimated:YES completion:nil];
-
-}
 
 #pragma mark - 检查相机权限
 - (BOOL)canUserCamear{

@@ -31,24 +31,24 @@
 
 - (IBAction)pushBtnClick:(id)sender {
     
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        
+//    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    
      
         
         LCCameraController *camera  =[[LCCameraController alloc]init];
 
         [self presentViewController:camera animated:YES completion:nil];
         
-    }else{
-       
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"模拟器没有摄像头" preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
-            
-        }]];
-        
-        [self presentViewController:alert animated:YES completion:nil];
-    }
+//    }else{
+//       
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"模拟器没有摄像头" preferredStyle:UIAlertControllerStyleAlert];
+//        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            
+//            
+//        }]];
+//        
+//        [self presentViewController:alert animated:YES completion:nil];
+//    }
 }
 
 @end
